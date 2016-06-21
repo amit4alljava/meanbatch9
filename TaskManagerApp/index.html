@@ -1,0 +1,40 @@
+<html>
+<head>
+   <link rel="stylesheet" href="css/design.css">
+    <script src="js/models/task.js"></script>
+    <script src="js/models/taskoperations.js"></script>
+    <script src="js/controllers/taskcontroller.js"></script>
+    
+</head>
+<body>
+   <h1>Task Manager Application</h1>
+    <table>
+        <tr>
+            <td><label for="">TaskName</label></td>
+            <td><input type="text" id="taskName"></td>
+        </tr>
+        <tr>
+            <td><label for="">TaskDesc</label></td>
+            <td><textarea  id="taskDesc" cols="20" rows="6"></textarea></td>
+        </tr>
+        <tr>
+            <table>
+                <tr>
+                    <td><button id="add">Add</button></td>
+                    <td><button id="delete">Delete</button></td>
+                    <td><button id="search">Search</button></td>
+                    <td><button id="sort">Sort</button></td>
+                    <td><button id="save">Save</button></td>
+                    <td><button id="load">Load</button></td>
+                </tr>
+            </table>
+        </tr>
+    </table>
+    <fieldset>
+        <legend>TaskList</legend>
+        <ul id="taskList">
+            
+        </ul>
+    </fieldset>
+</body>
+</html>

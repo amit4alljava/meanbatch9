@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script>
+    function doStart(){
+        console.log("Do Start Call....");    
+    }
+    function doProcess(){
+        console.log("Process Start");
+        for(var i = 1; i<=100000; i++){
+            for(var j = 1; j<=1000; j++){
+                for(var k = 1; k<=100; k++){
+                    
+                }
+            }
+        }
+        console.log("Process Ends....");
+        
+        }
+    function doStop(){
+        console.log("Stop Call...");
+    }
+    function createQueue(){
+        doStart();
+        setTimeout(doProcess,5000);
+        doStop();
+    }    
+    </script>
+</head>
+<body>
+    <button onclick="createQueue()">Click</button>
+</body>
+</html>
