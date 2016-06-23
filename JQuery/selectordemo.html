@@ -1,0 +1,51 @@
+<html>
+<head>
+   <link rel="stylesheet" href="css/custom.css">
+    <script src="js/libs/jquery-1.11.3.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("table tr:even").addClass("red");
+         $("table tr:odd").addClass("green");
+    });
+    </script>
+</head>
+<body>
+ <button onclick="$('div p:first').text('welcome')">
+     Click Me
+ </button>
+  <div>
+      <p>Hi</p>
+      <p>Hello</p>
+      <p>How r u </p>
+  </div>
+  
+   <table border="1">
+       <tr>
+           <td>Ram1</td>
+           <td>9001</td>
+       </tr>
+       <tr>
+           <td>Ram2</td>
+           <td>9002</td>
+       </tr>
+       <tr>
+           <td>Ram3</td>
+           <td>9003</td>
+       </tr>
+       <tr>
+           <td>Ram4</td>
+           <td>9004</td>
+       </tr>
+   </table>                    
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <button onclick="$(':text').val('')">Clear</button>
+</body>

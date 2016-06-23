@@ -1,0 +1,17 @@
+.divStyle{
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+.fontstyle{
+font-weight: bold;
+font-style: italic;
+font-size: 3em;
+color: red;    
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
