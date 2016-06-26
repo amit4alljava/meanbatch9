@@ -1,0 +1,7 @@
+.style{
+    color: red;
+}
+.completed{
+    text-decoration: line-through;
+    color: red;
+}

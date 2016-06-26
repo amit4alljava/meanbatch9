@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src="jquery-3.0.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        //$("p").hide(1000);
+        $("button").click(function(){
+            var txtValue= $("#txtName").val();
+            alert("TxtValue is "+txtValue);
+            $("div p span").html(txtValue);
+        });
+    });
+    </script>
+</head>
+
+<body>
+   <input type="text" id="txtName">
+   <div><p><span></span></p></div>
+   <button>Click</button>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+</body>
+</html>
