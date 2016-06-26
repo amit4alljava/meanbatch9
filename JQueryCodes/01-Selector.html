@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Selector Demo - Powered by TKHTS.COM</title>
+<style type="text/css">
+.paraclass{
+background-color: blue;
+font-family: sans-serif;
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<b>Example of Id, Class, element selector></b>
+<br>
+<p id="p1" class="paraclass">Paragraph 1</p>
+<p id="p2" class="paraclass">Paragraph 2</p>
+<p id="p3" >Paragraph 3</p>
+<script type="text/javascript" src="../js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$("p").click(function(){
+	alert("Element Code Execute");
+	$(this).hide();
+});
+$("#p1").click(function(){
+	alert("P1 ID Code Execute");
+});
+$(".paraclass").click(function(){
+	alert("Class ParaClass Click");
+});
+
+</script>
+</body>
+</html>

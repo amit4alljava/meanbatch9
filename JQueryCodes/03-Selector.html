@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mystyle
+{
+border-color: red;
+border-style: dashed;
+border-width: 2px;
+background-color: yellow;
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Example of Select any Input Types Selector and Multiple Selector-Powered by TKHTS.COM</title>
+</head>
+<body>
+
+<div style="margin-left: auto;margin-right: auto; width: 300px;height: 200px;margin-top: 150px;border: 5px solid;border-color: blue;">
+<p style="text-align: center;"><b><u>Login Page</u></b></p>
+<form action="#">
+<table width="100%" cellpadding="3" cellspacing="1">
+	<tbody>
+	<tr>
+		<td>Userid</td><td><input type="email" id="email" placeholder="Type Email Here"/></td>
+	</tr>
+	<tr>
+		<td>Password</td><td><input type="password" id="pwd" placeholder="Type Password Here"/></td>
+	</tr>
+	<tr>
+		<td>Pin</td><td><input type="text" id="pin" placeholder="Type Pin Here"/></td>
+	</tr>
+	<tr>
+		<td><button>Login</button></td><td><button>Reset</button></td>
+	</tr>
+	</tbody>
+</table>
+</form>
+</div>
+<script type="text/javascript" src="../js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+/* $(":button").click(function(){
+	alert("Button Clicked....");
+}); */
+$(":password").focusin(function(){
+	$(this).addClass("mystyle");
+	alert("Password Focused....");
+});
+$(":password").focusout(function(){
+	$(this).removeClass("mystyle");
+	alert("Password Focused....");
+});
+/* $("input").click(function(){
+	alert("Any Input Clicked....");
+}); */
+
+//Multiple Selector Example
+$(":button,p").click(function(){
+	alert("Any Input Button or Para Clicked....");
+});
+
+</script>
+</body>
+</html>

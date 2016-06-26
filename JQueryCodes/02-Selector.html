@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Insert title here</title>
+</head>
+<body>
+<b>Example of Nested or Child Selector-Powered by TKHTS.COM </b>
+<br>
+<div>
+<p>Pargraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<h1>Heading</h1>
+
+</div>
+<div id="tableDiv" style="border: 1px solid blue;width: 400px;">
+<table border="1" width="100%">
+<tr>
+<th>Empno</th><th>Name</th>
+</tr>
+<tr>
+<td>1001</td><td>Amit</td>
+</tr>
+<tr>
+<td>1002</td><td>Ram</td>
+</tr>
+<tr>
+<td>1003</td><td>Shyam</td>
+</tr>
+<tr>
+<td>1004</td><td>Sohan</td>
+</tr>
+<tr>
+<td>1005</td><td>Mohan</td>
+</tr>
+
+</table>
+<div></div>
+</div>
+
+<script type="text/javascript" src="../js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	alert("Total Paragraph inside Div  "+$("div").find("p").length);
+	alert("Total Elements inside Div "+$("div").find("*").length);
+	alert("Total Elements in the HTML File "+$("*").length);
+	$("div p:first").text("<b><u> Paragraph 1 Value Change </b></u>");  //Treat every thing as Text
+	$("div div:last").html("<b> <u> Last Div Value Change </u></b>"); // Treat every thing as Html
+	$("#tableDiv table tr:nth-child(3) td:nth-child(1)").text("Value Change**********"); 
+	//$("#tableDiv table tr:nth-child(3n) td:nth-child(1)").text("Value Change"); // 3n means change every occurance of 3rd
+	//$("#tableDiv table tr:nth-child(even) td:nth-child(1)").text("Value Change"); 
+	//$("#tableDiv table tr:nth-child(odd) td:nth-child(1)").text("Value Change");
+	//$("#tableDiv table tr:nth-child(odd)").css("aaa");
+});
+</script>
+</body>
+</html>
