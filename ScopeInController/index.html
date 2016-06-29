@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script>
+    var app = angular.module("myapp",[]);
+       //{{txtName|lowercase|initcap}}
+        //initCap(txtName)
+        app.filter("initcap",function(){
+            return function(name){
+               // return name;
+                return name.charAt(0).toUpperCase()+ name.substring(1);
+            }
+        })
+        app.controller("ctrl1",function($scope,$rootScope){
+            //$scope.salary = 0.0;
+           // $rootScope.salary1 = $scope.salary; 
+            $scope.updateSalary= function(){
+                alert("Update Salary is Called..."+$scope.salary);
+                $rootScope.salary1 = $scope.salary; 
+}
+            //$rootScope.salary =0.0;
+            $scope.data = "Hello I am Controller 1 Data";
+        });
+        app.controller("ctrl2",function($scope){
+            $scope.compute=function(){
+                alert("Compute Call "+$scope.salary1);
+           if($scope.salary1>0){
+            $scope.hra = $scope.salary1 *0.30;
+            $scope.da = $scope.salary1 *0.20;
+            $scope.ta = $scope.salary1 *0.10;
+               }
+                }
+            $scope.msg = "Message with Data "+$scope.data;
+        });
+    </script>
+</head>
+<body ng-app="myapp">
+   <div ng-controller="ctrl1">
+     <input type="text" ng-model="salary" placeholder="Type Salary Here" ng-change="updateSalary()" >
+      <input type="text" ng-init="txtName=''" ng-model="txtName">
+      
+      Your Name is {{txtName|lowercase|initcap}}
+<!--
+       <div ng-controller="ctrl2">
+          <button ng-click="compute()"> Compute</button>
+          <fieldset>
+              <legend>Salary Compute</legend>
+              Salary is {{salary}}<br>
+              HRA is {{hra}}<br>
+              DA is {{da}}<br>
+              TA is {{ta}}<br>
+          </fieldset>
+           Data is :: {{data}}
+           <br>
+           Name is :: {{txtName}}
+           <br>
+           Message With Data :{{msg}}
+       </div>
+-->
+       
+   </div>
+    <div ng-controller="ctrl2">
+          <button ng-click="compute()"> Compute</button>
+          <fieldset>
+              <legend>Salary Compute</legend>
+              Salary is {{salary}}<br>
+              HRA is {{hra}}<br>
+              DA is {{da}}<br>
+              TA is {{ta}}<br>
+          </fieldset>
+           Data is :: {{data}}
+           <br>
+           Name is :: {{txtName}}
+           <br>
+           Message With Data :{{msg}}
+       </div>
+</body>
+</html>
