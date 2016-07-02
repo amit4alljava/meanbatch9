@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DataList-AutoCompleter Demo - Powered by .com</title>
+</head>
+<body>
+<form action="http://www.google.com">
+<label>Contacts:</label>
+ <!-- <input type="text" title="Some Text"/>-->
+<input list="contactList" name="contacts" autofocus="autofocus" >
+<datalist id="contactList">
+<option value="India" label="Ind"/>
+  <option value="United State" label="US"/>
+  <option value="United Kingdom" label="UK"/>
+  
+</datalist>
+<input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
