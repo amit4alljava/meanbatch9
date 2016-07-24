@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script src="angular.min.js"></script>
+    <script src="directivedemo.js"></script>
+    
+</head>
+<body ng-app="myapp">
+    <display-date-directive></display-date-directive>
+    <div ng-controller="myctrl">
+        <name-directive></name-directive>
+        <br>
+        Your Name is {{firstName}}
+    </div>
+    Your Name is {{firstName}}
+    <div ng-controller="timectrl">
+        <button ng-click="doClock()"></button>
+        <clock></clock>
+    </div>
+    
+    <h1 attributelevel>I am Attr Level</h1>
+    <h1 class="classlevel"></h1>
+    <!--<h1> commentlevel</h1>-->
+</body>
+
+</html>

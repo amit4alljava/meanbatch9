@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app",[]);
+        app.controller("myctrl",function($scope,myfactory){
+            var promise = myfactory.getJSON();
+            promise.then(function(data){
+                $scope.data = data;
+            },function(err){
+                $scope.error = err;
+            })
+        });
+        app.factory("myfactory",function($http, $q){
+            return {
+                getJSON:function(){
+                    var defer = $q.defer();
+                    $http.get('loginjson').success(function(data){
+                        defer.resolve(data);
+                    }).error(function(err){
+                        defer.reject(err);
+                    });
+                return defer.promise;
+                }
+            }
+        });
+    </script>
+</head>
+<body ng-app="app" ng-controller="myctrl">
+    <h1>Welcome User</h1>
+    <input type="text"  ng-model="user">
+    <ul>
+        <li ng-repeat ="d in data|filter:user">
+            {{d.userid}} {{d.password}} {{d.username}}
+        </li>
+    </ul>
+    
+    
+</body>
+</html>
